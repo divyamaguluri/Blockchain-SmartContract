@@ -9,3 +9,5 @@ datepicker
 dist
 pages
 plugins
+build
+gitignore

@@ -138,7 +138,7 @@ window.addEventListener('load',async()=>{
             console.log(StudentRecords);
        
         } catch (error){
-            // console.log("error");
+            console.log("error");
         }
 
         
