@@ -816,81 +816,9 @@
 <script src="plugins/daterangepicker/daterangepicker.js"></script>
 <script src="plugins/inputmask/min/jquery.inputmask.bundle.min.js"></script>
 <!-- Blockchain Script -->
-<script src="./build/js/blockchain_code.js"></script>
+<script src="blockchain_code.js"></script>
 <!-- Blockchain Web3 library -->
 <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
-<!-- <script>
-           function validateSource(){
-            var source=document.getElementById('sourceId').value;
-            var patternS = /[A-Za-z]{3}/;
-            var result=patternS.test(source)
-              if(result==false)
-              alert("Invalid Source.")
-          }
-          function validateDestination(){
-          var destination=document.getElementById('destinationId').value;
-          var patternS = /[A-Za-z]{3}/;
-          var result=patternS.test(destination)
-            if(result==false)
-            alert("Invalid destination.")
-          }
-</script> -->
-<!-- <script>
-      $('#datemask').inputmask('yyyy-mm-dd', { 'placeholder': 'yyyy-mm-dd' })
-      $('[data-mask]').inputmask()
-
-      $('#btnCancel').click(function(){
-      $('#sourceId').val('');
-      $('#destinationId').val('');
-      $('#datePicker').val('');
-      $('#searchResult').html('');
-      })
- 
-
-      $('#btnSearch').click(function(){
-      $('#searchResult').empty();
-      var sourceId= $('#sourceId').val();
-      var destinationId= $('#destinationId').val();
-      var currencySelect = $('#currencySelect').val();
-      var datePicker = $('#datePicker').val();
-      var htmltable='';
-      var apiUrl="https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/"+currencySelect+"/en-US/"+sourceId+"-sky/"+destinationId+"-sky/"+datePicker;
-                                                                                                                  
-      // console.log(apiUrl);
-
-        $.ajax({
-        type: "GET",
-        url: apiUrl,
-        dataType: "json",
-        headers: {
-          "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-		      "x-rapidapi-key": "9dbf512798mshcc1d1f1c8568e40p1af303jsnba67b96c0ecf"
-        },
-          success: function(result,status) {
-          console.log(result);
-          var carriers = result.Carriers;
-          var quotes = result.Quotes;
-          var places = result.Places;
-
-          console.log(carriers);
-          console.log(quotes);
-          
-          if(carriers.length>0){
-
-              htmlTable = '<div class="col-md-6"><div class="card"><div class="card-header"><h3 class="card-title">Flights between'+places[0].CityName +'-' + places[1].CityName +'</h3></div><div class="card-body p-0"><table class="table table-hover text-nowrap"><thead><tr><th>S.No</th><th>Carrier</th><th>Flight Number</th><th>Price</th></tr></thead><tbody>';
-              for(var i=0 ; i<carriers.length; i++) {
-              htmlTable += '<tr><td>'+ (i+1) +'</td><td>'+ carriers[i].Name +'</td><td>'+ carriers[i].CarrierId +'</td><td>'+ quotes[0].MinPrice +'</td></tr>';
-          }
-            htmlTable += '</tbody></table> ';
-          } else {
-              htmlTable = '<p>No Flight Available</p>';
-          }
-              $('#searchResult').append(htmlTable);
-          }
-    });
-});
-
-</script> -->
 
 </body>
 </html>
